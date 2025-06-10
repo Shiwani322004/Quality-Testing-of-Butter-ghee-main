@@ -1,0 +1,445 @@
+/* ===========================
+   Base Styles
+=========================== */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: sans-serif;
+  background: url("../Images/bgImage.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===========================
+   Instrument Base Style
+=========================== */
+.instrument {
+  position: absolute;
+  height: auto;
+  width: auto;
+  transition: transform 1s ease;
+}
+
+/* ===========================
+   Shared Instrument Styles
+=========================== */
+.instrument img {
+  height: auto;
+  cursor: pointer;
+  position: relative;
+  transition: transform 1s ease;
+  z-index: 1;
+}
+
+/* ===========================
+   Individual Instruments
+=========================== */
+#spatula {
+  bottom: 10vw;
+  left: 4vw;
+  transition: transform 1s ease-in-out;
+  z-index: 2;
+}
+
+#spatula-w{
+  width: 14vw;
+  transition: transform 1s ease-in-out;
+}
+
+#porcelain-dish {
+  bottom: 20vh;
+  left: 36vw;
+  z-index: 100;
+  transition: transform 1s ease-in-out;
+}
+
+#dish {
+  width: 8.5vw;
+  transition: transform 1s ease-in-out;
+}
+
+#dessicator {
+  bottom: 14vh;
+  left: 65vw;
+  transition: transform 1s ease-in-out;
+  z-index: 500;
+}
+
+#dessicator-d1 {
+  width: 13vw;
+  transition: transform 1s ease-in-out;
+}
+
+#dessicator-lid {
+  bottom: 9vh;
+  left: 55vw;
+  transition: transform 1s ease-in-out;
+  z-index: 501;
+}
+
+#dessicator-d1-lid {
+  width: 12.4vw;
+  transition: transform 1s ease-in-out;
+}
+
+#wheighing-machine {
+  bottom: 2.3vh;
+  left: 2.6vw;
+  transition: transform 1s ease-in-out;
+}
+
+#wheighing-machine img {
+  width: 16vw;
+  transition: transform 1s ease-in-out;
+}
+
+#knife {
+  bottom: 20vh;
+  left: 23vw;
+  z-index: 10;
+  transition: transform 1s ease-in-out;
+}
+
+#knife-w {
+  width: 11vw;
+  
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+}
+
+#plate {
+  position: absolute;
+  bottom: 2.3vh;
+  left: 21vw;
+  transition: transform 1s ease-in-out;
+}
+
+#plate-w {
+  width: 14vw;
+  transition: transform 1s ease-in-out;
+}
+
+#hot-oven {
+  bottom: 12vh;
+  left: 80vw;
+  transition: transform 1s ease-in-out;
+  position: absolute;
+}
+
+#hot-oven-w {
+  width: 15vw;
+  transition: transform 1s ease-in-out;
+  position: relative;
+}
+
+#ovendoor-w {
+  width: 11vw;
+  margin-left: 0.26vw;
+  bottom: 4.8vh;
+  left: 0.4vw;
+  position: absolute;
+  transform-origin: left center;
+  transform: rotateY(0deg);
+  z-index: 200;
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+
+#ovendoor-w.open {
+  transform: rotateY(-80deg); /* Door opens to the side */
+}
+
+
+
+
+
+/* ===========================
+   3D Butter Block Styling
+=========================== */
+#butter-block {
+  position: absolute;
+  bottom: 5vh;
+  left: 24vw;
+  width: 8vw;
+  height: 11vh;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f9e076, #fcd85c);
+  border-radius: 10px;
+  box-shadow:
+    -10px 10px 10px rgba(0, 0, 0, 0.2),
+    10px 10px 15px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px #fff9c2,
+    inset 6px 6px 12px #cfae48;
+  z-index: 3;
+  overflow: hidden;
+  border: 1px solid #e8c74a;
+  transition: transform 1s ease-in-out;
+}
+
+#butter-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -0.52vw;
+  width: 0.52vw;
+  height: 100%;
+  background: linear-gradient(to right, #fcd85c, #e8c74a);
+  box-shadow: inset -5px -5px 10px #eac74f;
+  transition: transform 1s ease-in-out;
+}
+
+#butter-block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.93vh;
+  width: 100%;
+  height: 1.85vh;
+  background: linear-gradient(to bottom, #fbe67a, #fcd85c);
+  box-shadow: inset -5px -5px 10px #fff6b2;
+  transition: transform 1s ease-in-out;
+}
+
+#butter-block .butter-shine {
+  position: absolute;
+  top: 1.1vh;
+  left: 1.04vw;
+  width: 60%;
+  height: 1.67vh;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  filter: blur(4px);
+  transition: transform 1s ease-in-out;
+}
+#butter-slice{
+  position:absolute;
+  bottom: 5.5vh;
+  left: 30.5vw;
+  width: 0vw;
+  height: 0vh;
+  z-index: 8;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f9e076, #fcd85c);
+  border-radius: 10px;
+  box-shadow:
+    -10px 10px 10px rgba(0, 0, 0, 0.2),
+    10px 10px 15px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px #fff9c2,
+    inset 6px 6px 12px #cfae48;
+  z-index: 3;
+  overflow: hidden;
+  border: 1px solid #e8c74a;
+  transition: transform 1s ease-in-out;
+}
+#butter-slice-1{
+  bottom: 5.5vh;
+  left: 30.5vw;
+  width: 0vw;
+  height: 0vh;
+  z-index: 6;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f9e076, #fcd85c);
+  border-radius: 10px;
+  box-shadow:
+    -10px 10px 10px rgba(0, 0, 0, 0.2),
+    10px 10px 15px rgba(0, 0, 0, 0.3),
+    inset -5px -5px 10px #fff9c2,
+    inset 6px 6px 12px #cfae48;
+  z-index: 3;
+  overflow: hidden;
+  border: 1px solid #e8c74a;
+  transition: transform 1s ease-in-out;
+}
+
+/* final melted butter after the animation to move along with the dish */
+#melted-butter {
+  position: absolute;
+  transform: translate(55vw, -19vh); /* Initial hidden position */
+  width: 6vw;
+  height: 1.2vh;
+  background: radial-gradient(ellipse at center, #f9e076 0%, #fcd85c 60%, #e8c74a 100%);
+  border-radius: 50% / 30%;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.6),
+    inset -1px -1px 2px rgba(207, 174, 72, 0.5);
+  z-index: 99;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+/* Butter melting */
+
+@keyframes melt {
+  0% {
+    transform: translate(55vw, -21vh) scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: translate(55vw, -20vh) scaleY(0.7) scaleX(1.3);
+  }
+  100% {
+    transform: translate(55vw, -19vh) scaleY(0.3) scaleX(1.6);
+  }
+}
+
+
+.melting {
+  animation: melt 180s ease-in-out forwards;
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+
+#scale-display {
+  position: absolute;
+  top: 6.5vh;
+  left: 4.8vw;
+  width: 6vw;
+  height: 4.5vh;
+  background-color: #111;
+  color: lime;
+  font-family: 'Courier New', monospace;
+  font-size: 2.2vh;
+  text-align: center;
+  line-height: 5vh;
+  border-radius: 0.6vh;
+  box-shadow: inset 0 0 0.5vh lime;
+  z-index: 200;
+}
+
+#power-btn, #tare-btn {
+  position: absolute;
+  top: 7.5vh;
+  padding: 0.5vh 1vw;
+  font-size: 1.5vh;
+  display: flex;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 0.5vh;
+  margin-right: 1vw;
+  z-index: 200;
+  width: 1vw;
+  height: 3vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#power-btn {
+  left: 12vw;
+}
+
+#tare-btn {
+  left: 2vw;
+}
+#power-btn:active,
+#tare-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+}
+.hot-oven-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4vw;
+  position: absolute;
+  top: 83.7vh;
+  right: 9vw;
+  background: none;
+  padding: 0.3vh 0.5vw;
+  border-radius: 0.3vw;
+  box-shadow: 0 0 0.4vw #000;
+  z-index: 300;
+  height: auto;
+  width: auto;
+}
+
+/* Reorder temp screen */
+.hot-oven-controls > .temp-screen {
+  order: -1;
+}
+
+/* Temperature screen */
+.temp-screen {
+  width: 2vw;
+  height: 1.8vh;
+  background-color: black;
+  color: lime;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9vh;
+  text-align: center;
+  line-height: 1.8vh;
+  border-radius: 0.3vw;
+  border: 0.1vw solid #444;
+  box-shadow: inset 0 0 0.3vw #0f0;
+}
+
+/* Timer screen */
+.timer-screen {
+  width: 3.3vw;
+  height: 1.8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9vh;
+  border-radius: 0.3vw;
+  border: 0.1vw solid #444;
+  box-shadow: inset 0 0 0.3vw #0f0;
+}
+
+/* Power button */
+.power-btn {
+  width: 1.2vw;
+  height: 1.2vw;
+  background-color: grey;
+  border-radius: 50%;
+  box-shadow: 0 0 0.3vw rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.power-btn.on {
+  background-color: red;
+  box-shadow: 0 0 0.6vw red;
+}
+
+/* Timer light */
+.timer {
+  width: 0.9vw;
+  height: 0.9vw;
+  background-color: grey;
+  border-radius: 50%;
+  box-shadow: 0 0 0.3vw rgba(0, 255, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.timer.on {
+  background-color: limegreen;
+  box-shadow: 0 0 0.6vw limegreen;
+}
+#instruction-box {
+  position: fixed;
+  color: white;
+  top: 10vh;
+  left: 33vw;
+  width: 40vw;
+  padding: 1.5vh 2vw;
+  background-color:none;
+  /* border: 2px solid #71706b; */
+  border-radius: 1em;
+  font-size: 1.3rem;
+  font-family: 'Segoe UI', sans-serif;
+  /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+  z-index: 100;
+  white-space: pre-wrap;
+}

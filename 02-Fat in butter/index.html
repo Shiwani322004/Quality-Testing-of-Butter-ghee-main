@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bottle Pour Animation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="instruction-box">Click on the dish to place it on the weighing balance, turn on the weighing machine, and note down the weight (M1).</div>
+
+
+  <!-- spatula -->
+  <div class="instrument" id="spatula">
+    <img id="spatula-w" src="Images/spatula.png" alt="Bottle" />
+    <div class="water" id="bottle-water"></div>
+  </div>
+
+  <!-- Porcelain Dish -->
+  <div class="instrument" id="porcelain-dish">
+    <img id="dish" src="Images/volumetric-flask - 250ml.png" alt="volumetric-flask" />
+  </div>
+
+  <!-- Dessicator -->
+  <div class="instrument" id="liquid-container">
+    <img id="liquid-container-d1" src="Images/sulphuric-acid.png" alt="ammonia-container" />
+    <div>
+      <img id="liquid-acid-d1" src="Images/sulphuric-acid-solution.png" alt="ammonia" />
+    </div>
+  </div>
+  <div class="instrument" id="liquid-container-lid">
+    <img id="liquid-container-d1-lid" src="Images/sulphuric-acid-cork.png" alt="ammonia-container-cap" />
+  </div>
+  <!-- New Liquid Container for Ammonia -->
+<div class="instrument" id="liquid-container-2">
+  <img id="liquid-container-d2" src="Images/sulphuric-acid.png" alt="ammonia-container" />
+  <div>
+    <img id="liquid-ammonia" src="Images/ammonia-solution.png" alt="" />
+  </div>
+</div>
+<div class="instrument" id="liquid-container-lid-2">
+  <img id="liquid-container-d2-lid" src="Images/ammonia-cork.png" alt="ammonia-container-cap" />
+</div>
+<!-- end of second liquid cont -->
+
+<!-- pipette -->
+
+<div class="instrument" id="pipette">
+  <img id="pipette-w" src="Images/pippete.png" alt="pipette">
+</div>
+ <!-- pipette end -->
+  
+  <div class="instrument" id="knife">
+    <img id="knife-w" src="Images/knife.png" alt="knife" />
+  </div>
+  <div class="instrument" id="butter-block">
+    <div class="butter-shine"></div>
+    
+  </div>
+  <div id="melted-butter"></div>
+  <div class="instrument" id="butter-slice" class="butter">
+  
+
+  </div>
+  <div class="instrument" id="butter-slice-1"></div>
+  <div class="instrument" id="wheighing-machine">
+    <img id="wheighing-machine-w" src="Images/wheighing-machine.png" alt="weighing-machine" />
+    <div id="scale-display">OFF</div>
+
+  <!-- Buttons -->
+  <button id="power-btn">ON</button>
+  <button id="tare-btn">TARE</button>
+  </div>
+  <div class="instrument" id="hot-oven">
+    <img id="hot-oven-w" src="Images/hot-oven.png" alt="hot-oven" />
+    
+    <img id="ovendoor-w" src="Images/oven-door.png" alt="oven-door" />
+
+  </div>
+
+  <div class="hot-oven-controls">
+
+    <div class="power-btn"></div>
+    <div class="timer"></div>
+    <div class="temp-screen"></div>
+    <div class="timer-screen"></div>
+
+  </div>
+  <div class="instrument" id="plate">
+    <img id="plate-w" src="Images/plate.png" alt="knife" />
+  </div>
+  
+</div>
+
+  <script src="script/project.js"></script>
+</body>
+</html>
